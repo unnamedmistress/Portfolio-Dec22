@@ -1,0 +1,207 @@
+html{
+    background-color: rgb(113, 139, 186);
+    font-size: 14px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav{
+
+        display: inline-flex;
+        justify-content: right;
+        width:100%;
+        background-color: rgb(16, 9, 1);
+        padding-right:1%;
+}
+nav li{
+display:inline;
+line-height: 1.2em;
+font-size: larger;
+}
+header{
+  
+    background-image: url("/20220304_122226.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+
+}
+header img{
+    margin-left: 65%;
+    padding:2%;
+    position:sticky;
+}
+main{
+    width : 100vw;
+    height : 205vh;
+    display:flex;
+
+
+    
+}
+#aside{
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 20%;
+    height:100%;
+    align-content:flex-start;
+    border-right: 2px solid white;
+    line-height: 9;
+    block-size: fit-content;
+    text-align: center;
+    background-color: rgb(114, 218, 107);
+}
+section{
+ 
+    width:75%;
+    text-align: center;
+
+}
+
+article{
+    
+    display:flex;
+    block-size: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height:fit-content;
+    block-size: fit-content;
+    padding-bottom:2%;
+
+}
+
+#card-header h2{
+    position:relative;
+    margin-top: 0;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 1;
+    background-color: coral;
+    height:fit-content;
+    line-height: 0.9;
+    color:black;
+   
+}
+#card-header.bigger{
+    width:80vw;
+    margin:2%;
+   
+}
+.card-header{
+    margin:2%;
+}
+
+#card-header p{
+    text-align: center;
+    color:white;
+    font-size:0.8rem;
+   
+}
+
+#projects{
+    display:flex;
+    flex-wrap:wrap;
+    margin: 5px;
+    font-size:1.2rem;
+    width: 80vw;
+    flex: 1 1 100%;
+    width:fit-content;
+    text-align: right;
+    block-size: fit-content;
+
+    
+
+}
+
+#projects a:link{
+    text-decoration: none;
+}
+figure{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: -0%;
+    box-shadow: 10px 10px;
+    color:rgb(43, 45, 48);
+    border:4px solid rgb(96, 93, 93);
+    padding-bottom: 10%;
+
+ 
+   
+}
+figure.bigger {
+    background-image: url("/Screenshot_20221218_113402.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:50vh;
+}
+figure.cozy{
+    background-image: url("/Screenshot_20221207_054453.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:40vh;
+    width:39vw;
+    margin:2%
+
+}
+
+figure.power{
+    background-image: url("/Screenshot_20221219_084423.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:40vh;
+    width:40vw;
+    margin:2%;
+}
+figure.apps{
+    background-image: url("/Custom\ Apps\ I\ built.JPG");
+    background-position:left;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:40vh;
+    width:80vw;
+    margin:2%;
+}
+#pic {
+
+    padding-right: 75%;
+}
+
+.contact{
+    display:flex;
+    flex: 1 1 100%;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    block-size: fit-content;
+    border-top: 1px solid white;
+}
+.about ul li{
+    list-style-position:outside;
+    margin: 1%;
+    padding: 0;
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding:1%;
+}
+.about{
+    margin-left:2%;
+}
+.chrysti{
+    color:rgb(65, 235, 111);
+    font-size: 25px;
+    font-stretch: expanded;
+    width:2%;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.reichert{
+    color:rgb(66, 145, 229);
+    font-size: 27px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
