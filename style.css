@@ -238,9 +238,9 @@ article {
     padding-right: 75%;
   }
 
-  .contact {
+  #contact {
     display: flex;
-    flex: 1 1 100%;
+    flex: 1 2 100%;
     justify-content: space-between;
     font-size: 1.1rem;
     height: auto;
