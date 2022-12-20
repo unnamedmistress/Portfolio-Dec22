@@ -291,6 +291,9 @@ article {
       margin-top: 15%;
       line-height: 20;
     }
+    .about ul li {
+      font-size: 0.85em;
+    }
   
     header img {
       margin: right -50vw;
