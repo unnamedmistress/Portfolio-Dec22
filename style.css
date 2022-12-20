@@ -8,32 +8,58 @@ nav{
 
         display: inline-flex;
         justify-content: right;
-        width:100%;
+        width:100vw;
         background-color: rgb(16, 9, 1);
-        padding-right:1%;
+        padding-right:5%;
 }
 nav li{
 display:inline;
 line-height: 1.2em;
 font-size: larger;
 }
+a:link {
+    
+    text-decoration-color: hotpink;
+}
 header{
-  
-    background-image: url("/20220304_122226.jpg");
+  display:flex;
+    background-image: url("Portfolio-Dec22/img/20220304_122226.jpg");
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
+    width:105vw;
+    height:auto;
+    justify-content: center;
+    align-content: center;
 
 }
-header img{
-    margin-left: 65%;
+ #slide{
     padding:2%;
     position:sticky;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    img {width: 150px; height: auto;}
 }
+@keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+  
 main{
     width : 100vw;
-    height : 205vh;
+    height : 295vh;
     display:flex;
+    flex: 1 1 auto;
 
 
     
@@ -42,14 +68,22 @@ main{
     display:inline-flex;
     flex-direction: column;
     justify-content: left;
+    flex: 1 2 auto;
     width: 20%;
-    height:100%;
     align-content:flex-start;
     border-right: 2px solid white;
-    line-height: 9;
-    block-size: fit-content;
+    line-height: 25;
     text-align: center;
     background-color: rgb(114, 218, 107);
+}
+#me{
+    margin:-35vh;
+
+}
+#aside img{
+    width:75%;
+    margin-left:13%;
+    
 }
 section{
  
@@ -61,12 +95,11 @@ section{
 article{
     
     display:flex;
-    block-size: fit-content;
+    flex: 1 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
-    height:fit-content;
-    block-size: fit-content;
+    height:auto;
     padding-bottom:2%;
 
 }
@@ -78,7 +111,7 @@ article{
     text-align: center;
     z-index: 1;
     background-color: coral;
-    height:fit-content;
+    height:18%;
     line-height: 0.9;
     color:black;
    
@@ -105,17 +138,17 @@ article{
     margin: 5px;
     font-size:1.2rem;
     width: 80vw;
-    flex: 1 1 100%;
-    width:fit-content;
+    flex: 2 2 100%;
     text-align: right;
-    block-size: fit-content;
-
-    
-
+    height:auto;
+    flex: 1 1 auto;
 }
 
 #projects a:link{
     text-decoration: none;
+}
+figure:hover{
+    opacity: 0.75;
 }
 figure{
     display:flex;
@@ -124,41 +157,42 @@ figure{
     margin: -0%;
     box-shadow: 10px 10px;
     color:rgb(43, 45, 48);
-    border:4px solid rgb(96, 93, 93);
+    border:4px solid coral;
     padding-bottom: 10%;
+    flex: 5 5 auto;
 
- 
-   
 }
 figure.bigger {
-    background-image: url("/Screenshot_20221218_113402.png");
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    height:50vh;
-}
-figure.cozy{
-    background-image: url("/Screenshot_20221207_054453.png");
+    background-image: url("/Portfolio-Dec22/img/Screenshot_20221218_113402.png");
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
     height:40vh;
-    width:39vw;
-    margin:2%
+    width:70vw;
+    margin:2%;
+}
+figure.cozy{
+    background-image: url("/Portfolio-Dec22/img/Screenshot_20221207_054453.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:40vh;
+    width:35vw;;
+    margin-right:2%;
 
 }
 
 figure.power{
-    background-image: url("/Screenshot_20221219_084423.png");
+    background-image: url("/Portfolio-Dec22/img/Screenshot_20221219_084423.png");
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
     height:40vh;
-    width:40vw;
-    margin:2%;
+    width:35vw;
+    margin-left:2%;
 }
 figure.apps{
-    background-image: url("/Custom\ Apps\ I\ built.JPG");
+    background-image: url("/Portfolio-Dec22/img/Custom\ Apps\ I\ built.JPG");
     background-position:left;
     background-repeat:no-repeat;
     background-size: cover;
@@ -167,7 +201,6 @@ figure.apps{
     margin:2%;
 }
 #pic {
-
     padding-right: 75%;
 }
 
@@ -176,8 +209,9 @@ figure.apps{
     flex: 1 1 100%;
     justify-content: space-between;
     font-size: 1.1rem;
-    block-size: fit-content;
+    height:auto;
     border-top: 1px solid white;
+    flex: 1 1 auto;
 }
 .about ul li{
     list-style-position:outside;
@@ -203,5 +237,30 @@ figure.apps{
 .reichert{
     color:rgb(66, 145, 229);
     font-size: 27px;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 1px 1px 2px rgb(247, 101, 179), 0 0 1em blue, 0 0 0.2em blue;
+}
+footer.foot{
+    display:flex;
+    text-align: center;
+    z-index:2;
+    flex: 1 1 auto;
+
+}
+@media (max-width: 412px) { 
+    #aside h2{
+        font-size: 1.5rem;
+    margin-top: 15%;
+    } 
+    header img{
+       margin: right -50vw;
+    }
+   .cozy.power{
+    height:20%;
+    width:20%;
+   }
+    figure h2{
+        width:100%;
+        font-size: 0.9;
+        
+    }
 }
