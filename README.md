@@ -17,7 +17,7 @@
 
 See my Profile Here: https://unnamedmistress.github.io/Portfolio-Dec22/
 
-![Alt text](/Portfolio-Dec22/img/ReadmePic.png "Screenshot")
+![image](https://user-images.githubusercontent.com/113783682/208561817-4af7c407-19ec-4aff-87c0-d7d5348bbc83.png)
 
 
 <h3 align="left">Connect with me:</h3>
