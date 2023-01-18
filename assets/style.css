@@ -25,7 +25,7 @@ a:link {
 
 header {
   display: flex;
-  background-image: url("/Portfolio-Dec22/img/20220304_122226.jpg");
+  background-image: url("/img/20220304_122226.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,20 +162,15 @@ article {
     font-size: 0.8rem;
   }
   
-  #projects {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px;
-    font-size: 1.2rem;
-    width: 80vw;
-    flex: 2 2 100%;
-    text-align: right;
-    height: auto;
-    flex: 1 1 auto;
+  #projects li {
+list-style: none;
+font-size: 20px;
+text-align: left;
   }
   
   #projects a:link {
     text-decoration: none;
+    font-size: 20px;
   }
   
   figure:hover {
