@@ -77,7 +77,7 @@ main {
   width: 20%;
   align-content: flex-start;
   border-right: 2px solid white;
-  line-height: 18;
+  line-height: 14;
   text-align: center;
   background-color: rgb(114, 218, 107);
 }
