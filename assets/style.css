@@ -169,6 +169,7 @@ article {
 list-style: none;
 font-size: 20px;
 text-align: left;
+width: 90%l
   }
   
   #projects a:link {
@@ -261,6 +262,7 @@ text-align: left;
     margin-left: 2%;
     padding-top:2%;
     margin-top:5%;
+    width: 90%;
   }
   
   .chrysti {
