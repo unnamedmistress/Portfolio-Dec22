@@ -3,12 +3,19 @@ const api = process.env.API_KEY;
 const express = require('express');
 const path = require('path');
 
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(express.static('public')); // Add this line to serve static files correctly
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
+
+// Rest of your server.js code
+
 
 app.post('/openai-query', express.json(), async (req, res) => {
   const userInput = req.body.userInput;
