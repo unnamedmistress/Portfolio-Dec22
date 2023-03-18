@@ -1,22 +1,22 @@
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 const app = express();
+
+// Initialize dotenv
+dotenv.config();
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/openai-query', express.json(), async (req, res) => {
+app.post('/openai-query', async (req, res) => {
   const userInput = req.body.userInput;
   const aiResponse = await openAIQuery(userInput);
-  console.log(aiResponse)
-  console.log(req.body)
   res.json({ aiResponse });
 });
-
 async function openAIQuery(userInput) {
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
@@ -34,7 +34,7 @@ async function openAIQuery(userInput) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${api}`,
+      'Authorization': `Bearer ${process.env.API_KEY}`,
     },
     body: JSON.stringify(requestBody),
   };
