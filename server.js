@@ -1,4 +1,6 @@
-require('dotenv').config(); // load environment variables from .env file
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}// load environment variables from .env file
 const api = process.env.API_KEY;
 const express = require('express');
 const fetch = require('node-fetch');
