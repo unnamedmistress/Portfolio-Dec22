@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstNameInput = document.querySelector('#first-name-input');
 const firstName = firstNameInput.value.trim();
 
-
+console.log(process.env);
   async function openAIQuery(message) {
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
   
