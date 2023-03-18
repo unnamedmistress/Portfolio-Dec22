@@ -1,24 +1,7 @@
-html {
-  background-color: rgb(113, 139, 186);
-  font-size: 14px;
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
-nav {
-  display: inline-flex;
-  justify-content: right;
-  width: 100%;
-  background-color: rgb(16, 9, 1);
-  padding-right: 5%;
+html, body{
+  background-color: aquamarine;
 }
-
-nav li {
-  display: inline;
-  line-height: 1.2em;
-  font-size: larger;
-}
-
 a:link {
   text-decoration-color: hotpink;
 }
@@ -33,6 +16,11 @@ header {
   height: auto;
   justify-content: center;
   align-content: center;
+}
+#aside img {
+  max-height: 150px;
+  max-width: 100px;
+ text-align: left;
 }
 
 #slide {
@@ -61,230 +49,36 @@ header {
     transform: translatey(0px);
   }
 }
-
-main {
-  width: 100%;
-  height: 295vh;
-  display: flex;
-  flex: 1 1 auto;
+#summary {
+  background-color: #F5F5F5;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
-#aside {
-  display: inline-flex;
+#summary h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #006699;
+  text-align: center;
+}
+span {
+  background-color: coral;
+  color: #FFFFFF;
+  text-shadow: 2px 2px #333333;
+}
+.card {
+  display: flex;
   flex-direction: column;
-  justify-content: left;
-  flex: 1 2 auto;
-  width: 20%;
-  align-content: flex-start;
-  border-right: 2px solid white;
-  line-height: 14;
-  text-align: center;
-  background-color: rgb(114, 218, 107);
 }
 
-#me {
-  margin: -35vh;
+.card-body {
+  margin-bottom: 1rem;
 }
 
-#aside img {
-  width: 75%;
-  margin-left: 13%;
+.card-img-top {
+  margin-bottom: -1.5rem;
 }
-
-section {
-  width: 75%;
-  text-align: center;
-}
-
-article {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-between;
-  height: auto;
-  padding-bottom: 2%;
-}
-
-#card-header h2 {
-  position: relative;
-  
-}
-
-  #me {
-   margin-top:-20vh;
-  }
-  
-  #aside img {
-    width: 75%;
-    margin-left: 13%;
-  }
-  
-  section {
-    width: 75%;
-    text-align: center;
-  }
-  
-  article {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    height: auto;
-    padding-bottom: 2%;
-  }
-  
-  #card-header h2 {
-    position: relative;
-    margin-top: 0;
-    border-radius: 2px;
-    text-align: center;
-    z-index: 1;
-    background-color: coral;
-    height: 18%;
-    line-height: 0.9;
-    color: black;
-  }
-  
-  #card-header.bigger {
-    width: 80vw;
-    margin: 2%;
-  }
-  
-  .card-header {
-    margin: 2%;
-  }
-  
-  #card-header p {
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-  }
-  li{
-    list-style-type:none;
-    font-weight: 600;
-  }
-  #projects li {
-list-style: none;
-font-size: 20px;
-text-align: left;
-width: 90%l
-  }
-  
-  #projects a:link {
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  figure:hover {
-    opacity: 0.75;
-  }
-  
-  figure {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: -0%;
-    box-shadow: 10px 10px;
-    color: rgb(43, 45, 48);
-    border: 4px solid coral;
-    padding-bottom: 10%;
-    flex: 5 5 auto;
-  }
-  
-  figure.bigger {
-    background-image: url("/Portfolio-Dec22/img/Screenshot_20221218_113402.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 70vw;
-    margin: 2%;
-  }
-  
-  figure.cozy {
-    background-image: url("/Portfolio-Dec22/img/Screenshot_20221207_054453.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 35vw;
-    margin-right: 2%;
-  }
-  
-  figure.power {
-    background-image: url("/Portfolio-Dec22/img/Screenshot_20221219_084423.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 35vw;
-    margin-left: 2%;
-  }
-  
-  figure.apps {
-    background-image: url("/Portfolio-Dec22/img/Custom\ Apps\ I\ built.JPG");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 80vw;
-    margin: 2%;
-  }
-  
-  #pic {
-    padding-right: 75%;
-  }
-
-  #contact {
-    display: flex;
-    flex: 1 2 100%;
-    justify-content: space-between;
-    font-size: 1.1rem;
-    height: auto;
-    border-top: 1px solid white;
-  }
-  
-  .about ul li {
-    list-style-position: outside;
-    margin: 1%;
-    padding: 0;
-    text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-   
-    padding: 1%;
-  }
-  
-  .about {
-    margin-left: 2%;
-    padding-top:2%;
-    margin-top:5%;
-    width: 90%;
-  }
-  
-  .chrysti {
-    color: rgb(65, 235, 111);
-    font-size: 25px;
-    font-stretch: expanded;
-    width: 2%;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-  }
-  
-  .reichert {
-    color: rgb(66, 145, 229);
-    font-size: 27px;
-    text-shadow: 1px 1px 2px rgb(247, 101, 179), 0 0 1em blue, 0 0 0.2em blue;
-  }
-  
-  footer.foot {
-    display: flex;
-    text-align: center;
-    z-index: 2;
-  }
-  
   @media (max-width: 412px) {
     #aside h2 {
       font-size: 1.5rem;

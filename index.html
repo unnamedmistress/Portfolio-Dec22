@@ -5,80 +5,197 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/style.css">
-
-    <title>Chrysti's Portfolio Dec 2022</title>
+    <title>Chrysti's Portfolio 2023 </title>
 </head>
 
 <body>
-
-    <nav>
-
-        <ul>
-            <li><a href="#me">About Me </a>||</li>
-            <li><a href="assets/Resume-Chrysti-Reichert 2023.pdf">Resume |</a>|</li>
-            <li><a href="#projects">Projects </a>||</li>
-            <li><a href="#contact">Contacts</a></li>
-        </ul>
+    <!-- Update the navigation with Bootstrap styles -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chrysti's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets/Reichert-Resume.docx">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://medium.com/@momchrysti">Medium Articles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
     <header>
-        <img src="img/Logo.png" height="150px" id="slide" alt="Chrysti's logo"> 
+        <img src="img/Logo.png" height="200px" id="slide" alt="Chrysti's logo">
     </header>
 
-    <main>
-
-        <aside id="aside">
-            <img src="img/Profile shot.jpg" alt="profile picture">
-            <h2 id="me">About me</h2><br>
-            <h2>Projects</h2>
-            <br>
-            <h2>Contact Me:</h2>
-        </aside>
-        <section>
-            <article class="about">
+    <main class="container-fluid">
+        <div class="row">
+            <!-- Left sidebar -->
+            <aside id="aside" class="col-md-3 bg-light">
+                <img src="img/Profile shot.jpg" alt="profile picture" class="img-fluid my-3">
+                <h2 id="about">About me</h2>
                 <ul>
-                    <li>👋 Hi, I’m <span class="chrysti">Chrysti</span><span class="reichert"> Reichert</span></li>
-                   
-                    <li>I am a passionate web developer with a strong foundation in problem solving, a history of creating dynamic workflows, and a constant desire to learn new programming languages. With experience in Power Apps, Power Automate, and Sharepoint, and a Bachelor's degree from Indiana University, I am a dedicated leader with over 13 years of managing a team of 7. </li>
-                    <li>📫 How to reach me: <a href="mailto: momchrysti@gmail.com">momchrysti@gmail.com</a></li>
-                </ul>
-            </article>
-
-            <article>
-
-                <ul id = "projects"><span class = 'chrysti'>Projects that I am proud of:</span> </ul>
-            
-            </article>
-            <article id="contact">
-                <h3><img src="https://img.freepik.com/free-icon/auricular-phone_318-1028.jpg" alt="phone emoji"
-                        height="50" width="50"></a>727-520-5180</h3>
-                <h3><a href="mailto: momchrysti@gmail.com">Send Email</a></h3>
-                <h4><a href="https://github.com/unnamedmistress"> <img
-                            src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" height="60"
-                            width="100" alt="Github emoji"></a></h4>
-                <h4><a href="https://www.linkedin.com/in/chrysti-reichert-13675b165/"> <img
-                            src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height="60" width="80"
-                            alt="Linked emoji"></a>Linkedin</h4>
-                <br>
-              
-            </article>  
-            <br>
-            <ul>
-                    <li>GitBash/GitHub</li>
-                    <li>CSS</li>
-                    <li>HTML</li>
-                    <li>Javascript</li>
+                    <li>Web design and development</li>
+                    <li>AI workplace solutions</li>
+                    <li>Search engine optimization (SEO)</li>
+                    <li>Social media marketing content</li>
+                    <li>Content creation and marketing</li>
+                    <li>AI prompt training for teams</li>
+                    <li>AI website integrations</li>
+                    <li>Consulting and strategy</li>
+                  </ul>
+                <h2>Skills</h2>
+                <ul>
+                    <li>AI consulting</li>
+                    <li>OpenAI Integration</li>
+                    <li>OpenAI API models</li>
+                    <li>JavaScript</li>
+                    <li>Database Design</li>
+                    <li>APIs (3 years)</li>
+                    <li>SQL (3 years)</li>
                     <li>MySQL</li>
-                    <li>NodeJs</li>
-                    <li>BootStrap</li>
-                    <li>JQuery</li>
+                    <li>Node.js</li>
+                    <li>REST API</li>
+                    <li>React</li>
+                    <li>MongoDB</li>
+                    <li>User Interface (UI)</li>
+                    <li>HTML5</li>
+                    <li>Git/GitHub</li>
+                    <li>Bootstrap/Tailwind</li>
                     <li>OOP</li>
-                </ul>
-        </section>
-    </main>
-    <footer>
-        <h4>Made with 🦄, 🌈🌈 and 🥹by Chrysti</h4>
-    </footer>
-</body>
-<script src = 'assets/script.js'> </script>
-</html>
+                    <li>Power BI (3 years)</li>
+                    <li>Power Apps (3 years)</li>
+                    <li>Microsoft Excel (20+ years)</li>
+                    <li>Adobe Acrobat (10+ years)</li>
+                    <li>Google Suite (7 years)</li>
+                    <li>Supervising experience (10+ years)</li>
+                    <li>Time management</li>
+                    <li>Project management</li>
+                    <li>Application Development</li>
+                    <li>Public Speaking</li>
+                    <li>Case Management</li>
+                    <li>Meeting Facilitation</li>
+                    <li>Database management</li>
+                    <li>CSS</li>
+                  </ul>
+              </aside>
+            <!-- Right side -->
+            <section class="col-md-9">
+                <!-- Summary section -->
+                <div id="summary" class="my-3">
+                    <h2>Summary</h2>
+                    <p>I provide <span class="service">consulting services</span> to help businesses tap into the unparalleled potential of <span class="ai">artificial intelligence</span>. Ready to turn your company into a well-oiled, automated machine? Need to wow your customers with next-level experiences? Eager to dive into data insights that will leave your competitors in the dust? I'm your go-to guy for guiding you through the <span class="ai">AI maze</span> and helping you achieve your wildest business dreams.
+                  
+                      I don't just consult – I <span class="service">train</span> too! With <span class="ai">AI prompt training</span> I'll whip your team into AI shape faster than you can say "Skynet." Say goodbye to technophobia and hello to a squad of <span class="ai">AI-savvy pros</span>.
+                  
+                      And if you're in need of some <span class="ai">AI-themed content</span> that's equal parts informative and entertaining, look no further. I'm a seasoned AI wordsmith, ready to craft anything from page-turning books to insightful Medium articles or dazzling marketing materials that'll have your audience glued to their screens.
+                  
+                      With my expertise in <span class="ai">AI implementation, training, and content creation</span>, I'm here to help you soar above the competition and thrive in today's rapidly-evolving digital landscape. Let's join forces and harness the power of <span class="ai">AI</span> to propel your business into the stratosphere!</p>
+                      <a href="https://medium.com/@momchrysti/the-profit-boosting-potential-of-openai-why-your-business-needs-an-ai-implementation-consultant-670211c7059b" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 20px; background-color: coral; color: #FFFFFF; text-decoration: none; font-weight: bold; border-radius: 5px;">Why You Need an AI Consultant Now</a>
+
+                    </div>
+
+                <!-- Projects section -->
+                <div id="projects" class="my-3">
+                    <h2>Projects</h2>
+                    <div class="row">
+                    <div class="col-md-4">
+                    <div class="card">
+                        <video src="./img/typoterminator.mp4" class="card-img-top" alt="Project 1" height="150" controls></video>
+                    <div class="card-body">
+                        <br>
+                    <h5 class="card-title">Typo Terminator</h5>
+                    <p>Generates a unique cover letter for every job you apply to with perfect spelling and grammar customized to your unique resume! Thats not all! It can help children with their essays for school! I call it the Typo Terminator!</p>
+                    <a href="https://typoterminator.herokuapp.com/" class="btn btn-primary">Link to use</a><a href="https://github.com/unnamedmistress/typoterm" class="btn btn-primary ml-2">Link to code repository</a>
+                    </div>
+                    </div>
+                    </div>
+                    <!-- Add the remaining 5 project placeholders -->
+                    <div class="col-md-4">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                    <h5 class="card-title">Project 3</h5>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 4">
+                    <div class="card-body">
+                    <h5 class="card-title">Project 4</h5>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 5">
+                    <div class="card-body">
+                    <h5 class="card-title">Project 5</h5>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 6">
+                    <div class="card-body">
+                    <h5 class="card-title">Project 6</h5>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                                <!-- Contact section -->
+                                <div id="contact" class="my-3">
+                                    <h2>Contact</h2>
+                                    <h4>Set up a 30 min call with me here: <a href= "https://calendly.com/momchrysti/30min"> calendly</a></h4>
+                                    <p> Hire me on Upwork <a href="https://www.upwork.com/freelancers/~01d2b9ccf754091705" target="_blank">Profile</a></p>
+                                    <p>Email: momchrysti@gmail.com</p>
+                                    <p>Location: St. Petersburg FL </p>
+                                    <p>LinkedIn: <a href="https://www.linkedin.com/in/chrysti-reichert-13675b165/" target="_blank">LinkedIn</a></p>
+                                    <p>GitHub: <a href="https://github.com/unnamedmistress" target="_blank">GitHub Repositories</a></p>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                    
+                    <footer class="bg-dark text-white py-2 text-center">
+                        <p>&copy; 2023 </p>
+                    </footer>
+
+                    <script src="assets/script.js"></script>
+                </body>
+
+                </html>
