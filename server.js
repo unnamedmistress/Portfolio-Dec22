@@ -15,7 +15,7 @@ app.post('/openai-query', (req, res) => {
   res.status(200).send('Success');
 });
 
-const PORT = process.env.PORT || 3000;
+
 
 
 app.post('/openai-query', express.json(), async (req, res) => {
@@ -60,7 +60,7 @@ async function openAIQuery(userInput) {
     console.error('Error with OpenAI API call:', error);
   }
 }
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
