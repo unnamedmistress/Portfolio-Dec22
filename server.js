@@ -9,15 +9,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/openai-query', (req, res) => {
-  // Handle the OpenAI API call here.
-  console.log(req.body);
-  res.status(200).send('Success');
-});
-
-
-
-
 app.post('/openai-query', express.json(), async (req, res) => {
   const userInput = req.body.userInput;
   const aiResponse = await openAIQuery(userInput);
