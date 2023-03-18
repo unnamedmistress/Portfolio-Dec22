@@ -15,8 +15,7 @@
 - ⚡ Fun fact:   **I programed my graphic calculator to play blackjack in my Jr. year of High School. ||**
 **My first job was working in a convent for retired nuns**
 
-See my Profile Here: https://unnamedmistress.github.io/Portfolio-Dec22/
-
+See my Profile Here: https://resumechrysti.herokuapp.com/
 ![image](https://user-images.githubusercontent.com/113783682/208561817-4af7c407-19ec-4aff-87c0-d7d5348bbc83.png)
 
 
