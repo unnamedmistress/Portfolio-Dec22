@@ -14,9 +14,13 @@ app.use(cors());
 
 app.post('/openai-query', async (req, res) => {
   const userInput = req.body.userInput;
-  const aiResponse = await openAIQuery(userInput);
+  const firstName = req.body.firstName; // Add this line to get the firstName from the request body
+  console.log('Received userInput:', userInput);
+  const aiResponse = await openAIQuery(userInput, firstName); // Pass the firstName variable to the function
+  console.log('AI response:', aiResponse);
   res.json({ aiResponse });
 });
+
 async function openAIQuery(userInput) {
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 

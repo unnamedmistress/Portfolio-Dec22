@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userInput }),
+        body: JSON.stringify({ userInputreq }),
       });
       const data = await response.json();
       return data.aiResponse;
