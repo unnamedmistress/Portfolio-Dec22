@@ -1,5 +1,5 @@
 require('dotenv').config(); // load environment variables from .env file
-
+const api = process.env.API_KEY;
 const express = require('express');
 const path = require('path');
 
