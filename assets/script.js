@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const messageBox = document.querySelector('#message-box');
-  const apiKey = window.API_KEY;
+  const apiKey = process.env.API_KEY;
   const sendButton = document.querySelector('#send-button');
   const firstNameInput = document.querySelector('#first-name-input');
 const firstName = firstNameInput.value.trim();
