@@ -1,46 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const messageBox = document.querySelector('#message-box');
-  const apiKey = process.env.API_KEY;
   const sendButton = document.querySelector('#send-button');
   const firstNameInput = document.querySelector('#first-name-input');
-const firstName = firstNameInput.value.trim();
+  const firstName = firstNameInput.value.trim();
 
-console.log(process.env);
-  async function openAIQuery(message) {
-    const apiUrl = 'https://api.openai.com/v1/chat/completions';
-  
-    const requestBody = {
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'assistant', content: `Respond to this message as if you are me, Chrysti Reichert and use the user's name starting with 'Hello: ${firstName}' when responding. I provide consulting services to help businesses tap into the unparalleled potential of artificial intelligence. Ready to turn your company into a well-oiled, automated machine? Need to wow your customers with next-level experiences? Eager to dive into data insights that will leave your competitors in the dust? I'm your go-to guy for guiding you through the AI maze and helping you achieve your wildest business dreams. I don't just consult – I train too! With AI prompt training I'll whip your team into AI shape faster than you can say "Skynet." Say goodbye to technophobia and hello to a squad of AI-savvy pros. And if you're in need of some AI-themed content that's equal parts informative and entertaining, look no further. I'm a seasoned AI wordsmith, ready to craft anything from page-turning books to insightful Medium articles or dazzling marketing materials that'll have your audience glued to their screens. With my expertise in AI implementation, training, and content creation, I'm here to help you soar above the competition and thrive in today's rapidly-evolving digital landscape. Let's join forces and harness the power of AI to propel your business into the stratosphere! Add humor in responses but keep professional and keep pitching me for consulting or full time Software Engineering jobs.
-      Offer to set up a mini consultation call to discuss the project here: https://calendly.com/momchrysti/30min.
-      Respond to questions about how a business can be helped by me, provide a 5 bullet point list with very specific solutions.
-      This is my Resume: ` + Resume + message }],
-      user: firstName,
-    };
-  
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify(requestBody),
-    };
-  
+  async function openAIQuery(userInput) {
     try {
-      const response = await fetch(apiUrl, requestOptions);
+      const response = await fetch('/openai-query', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput }),
+      });
       const data = await response.json();
-      console.log(data);
-      if (data.choices && data.choices.length > 0) {
-        return data.choices[0].message.content;
-      } else {
-        throw new Error('No response from the API');
-      }
+      return data.aiResponse;
     } catch (error) {
       console.error('Error with OpenAI API call:', error);
     }
   }
-  
 
   function createMessage(content, sender) {
     const message = document.createElement('div');
@@ -50,13 +28,13 @@ console.log(process.env);
   }
 
   function appendMessage(content, sender) {
-  const message = createMessage(content, sender);
-  if (sender === 'ai') {
-    const linkRegex = /(https?:\/\/[^\s]+)/g;
-    message.innerHTML = message.innerHTML.replace(linkRegex, '<a href="$1" target="_blank">$1</a>');
+    const message = createMessage(content, sender);
+    if (sender === 'ai') {
+      const linkRegex = /(https?:\/\/[^\s]+)/g;
+      message.innerHTML = message.innerHTML.replace(linkRegex, '<a href="$1" target="_blank">$1</a>');
+    }
+    messageBox.appendChild(message);
   }
-  messageBox.appendChild(message);
-}
 
   function setLoadingState(loading) {
     if (loading) {
@@ -71,7 +49,7 @@ console.log(process.env);
   function showTypingAnimation() {
     const typingMessage = document.createElement('div');
     typingMessage.className = 'alert alert-secondary m-1 typing-animation';
-  typingMessage.innerHTML = 'Typing message.. this may take a few extra seconds <span class="dot-animation">...</span>';
+    typingMessage.innerHTML = 'Typing message.. this may take a few extra seconds <span class="dot-animation">...</span>';
     messageBox.appendChild(typingMessage);
   }
 
@@ -105,6 +83,8 @@ console.log(process.env);
     messageBox.scrollTop = messageBox.scrollHeight;
   });
 });
+
+
 
 const Resume = `
 Chrysti Reichert
