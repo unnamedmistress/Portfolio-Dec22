@@ -1,5 +1,38 @@
 {
+  "name": "portfolio-dec22",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 👋, I'm Chrysti Reichert</h1>",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack",
+    "dev": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run build",
+    "predev": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unnamedmistress/Portfolio-Dec22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unnamedmistress/Portfolio-Dec22/issues"
+  },
+  "homepage": "https://github.com/unnamedmistress/Portfolio-Dec22#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
+    "path-browserify": "^1.0.1",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.6.0"
   }
 }

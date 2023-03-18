@@ -5,14 +5,24 @@ html, body{
 a:link {
   text-decoration-color: hotpink;
 }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-color: coral;
+}
 
+.card:hover .card-title,
+.card:hover p,
+.card:hover a {
+  color: rgb(16, 77, 77);
+}
 header {
   display: flex;
   background-image: url("https://raw.githubusercontent.com/unnamedmistress/Portfolio-Dec22/main/img/20220304_122226.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 105vw;
+
   height: auto;
   justify-content: center;
   align-content: center;
@@ -55,8 +65,37 @@ header {
   margin: 20px;
   border-radius: 10px;
 }
+.dot-animation {
+  display: inline;
+  font-weight: bold;
+  animation: loading-dots 1s steps(3, end) infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: black;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 black, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%, 100% {
+    text-shadow: 0.25em 0 0 black, 0.5em 0 0 black;
+  }
+}
+
 
 #summary h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #006699;
+  text-align: center;
+}
+#projects h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #006699;
@@ -103,3 +142,9 @@ span {
       font-size: 0.9;
     }
   }
+  @media (max-width: 768px) {
+    #aside {
+      order: 2;
+    }
+  }
+  
