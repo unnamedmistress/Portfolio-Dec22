@@ -21,7 +21,7 @@ app.post('/openai-query', async (req, res) => {
   res.json({ aiResponse });
 });
 
-async function openAIQuery(userInput) {
+async function openAIQuery(userInput, firstName) {
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   // Your requestBody and requestOptions remain the same, just remove 'apiKey' variable
