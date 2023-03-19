@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const firstNameInput = document.querySelector('#first-name-input');
   const firstName = firstNameInput.value.trim();
 
-  async function openAIQuery(userInput) {
+  async function openAIQuery(userInput, firstName) {
     try {
       const response = await fetch('/openai-query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userInput }),
+        body: JSON.stringify({ userInput, firstName }),
       });
       const data = await response.json();
       return data.aiResponse;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setLoadingState(true);
     showTypingAnimation();
 
-    const aiResponse = await openAIQuery(userInput);
+    const aiResponse = await openAIQuery(userInput, firstName);
     removeTypingAnimation();
 
     if (aiResponse) {
