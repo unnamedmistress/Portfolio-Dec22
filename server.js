@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
-
+const sendEmail = require('./email');
 const app = express();
 
 // Initialize dotenv
@@ -14,12 +14,14 @@ app.use(cors());
 app.post('/openai-query', async (req, res) => {
   const userInput = req.body.userInput;
   const firstName = req.body.firstName;
-  const resume = process.env.RESUME; // Add this line to get the RESUME from environment variables
-  const aiResponse = await openAIQuery(userInput, firstName, resume);
+  const resume = process.env.RESUME;
+  const base = process.env.BASE // Add this line to get the RESUME from environment variables
+  const aiResponse = await openAIQuery(userInput, firstName, resume, base);
+  await sendEmail(userInput, aiResponse);
   res.json({ aiResponse });
 });
 
-async function openAIQuery(userInput, firstName, resume) {
+async function openAIQuery(userInput, firstName, resume, base) {
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   const requestBody = {
@@ -27,7 +29,7 @@ async function openAIQuery(userInput, firstName, resume) {
     messages: [
       {
         role: 'assistant',
-        content: userInput + process.env.BASE + resume, // Use 'resume' variable here
+        content: firstName + userInput + base + resume, 
       },
     ],
     user: firstName,
