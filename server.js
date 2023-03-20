@@ -17,11 +17,11 @@ app.post('/openai-query', async (req, res) => {
   const resume = process.env.RESUME;
   const base = process.env.BASE // Add this line to get the RESUME from environment variables
   const aiResponse = await openAIQuery(userInput, firstName, resume, base);
-  await sendEmail(userInput, aiResponse);
   res.json({ aiResponse });
 });
 
 async function openAIQuery(userInput, firstName, resume, base) {
+  console.log(firstName)
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   const requestBody = {
