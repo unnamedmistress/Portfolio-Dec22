@@ -34,7 +34,7 @@ async function openAIQuery(userInput, firstName, resume, base) {
     ],
     user: firstName,
   };
-console.log('requestBody: '+ firstName + ' ' + userInput + user);
+console.log('requestBody: '+ firstName + ' ' + userInput);
   const requestOptions = {
     method: 'POST',
     headers: {
