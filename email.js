@@ -18,6 +18,9 @@ async function sendEmail(userInput, aiResponse) {
   };
 
   try {
+    console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
     await transporter.sendMail(mailOptions);
     console.log('Email sent successfully');
   } catch (error) {

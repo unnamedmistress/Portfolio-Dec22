@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const data = await response.json();
       return data.aiResponse;
     } catch (error) {
-      alert (`AI is sleeping right now. Please try again later.`);
+      alert (`You've hit the question limit, reload the page to ask more or schedule a consultation with me.`);
       console.error('Error with OpenAI API call:', error);
     }
   }
