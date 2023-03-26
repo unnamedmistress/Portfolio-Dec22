@@ -26,10 +26,8 @@ async function openAIQuery(userInput, firstName, resume, base) {
   const requestBody = {
     model: 'gpt-3.5-turbo',
     messages: [
-      {
-        role: 'assistant',
-        content: firstName + userInput + base + resume, 
-      },
+      {"role": "system", "content": base + resume},
+      {"role": "user", "content": firstName + userInput},
     ],
     user: firstName,
   };
