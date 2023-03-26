@@ -13,8 +13,8 @@ app.use(cors());
 app.post('/openai-query', async (req, res) => {
   const userInput = req.body.userInput;
   const firstName = req.body.firstName;
-  const resume = process.env.RESUME;
-  const base = process.env.BASE // Add this line to get the RESUME from environment variables
+  const resume = process.env.REACT_APP_RESUME;
+  const base = process.env.REACT_APP_BASE // Add this line to get the RESUME from environment variables
   const aiResponse = await openAIQuery(userInput, firstName, resume, base);
   res.json({ aiResponse });
 });
@@ -27,7 +27,7 @@ async function openAIQuery(userInput, firstName, resume, base) {
     model: 'gpt-3.5-turbo',
     messages: [
       {"role": "system", "content": base + resume},
-      {"role": "user", "content": firstName + userInput},
+      {"role": "user", "content": "NAME:"+ firstName + 'Respond to this user input: '+ userInput},
     ],
     user: firstName,
   };
