@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const sendButton = document.querySelector('#send-button');
   const firstNameInput = document.querySelector('#first-name-input');
   const firstName = firstNameInput.value.trim();
-
+  function showInitialMessage() {
+    const initialMessage = 'Hi, How can we help you evolve with Artificial Intelligence today?';
+    appendMessage(initialMessage, 'ai');
+  }
   async function openAIQuery(userInput, firstName) {
     try {
       const response = await fetch('/openai-query', {
@@ -83,6 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     messageBox.scrollTop = messageBox.scrollHeight;
   }
+  showInitialMessage();
 
   sendButton.addEventListener('click', handleSendMessage);
 

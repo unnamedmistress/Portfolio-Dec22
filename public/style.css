@@ -1,6 +1,52 @@
 
 html, body{
   background-color: aquamarine;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+}
+/* Aside styling */
+#aside {
+  padding: 1rem;
+}
+
+/* Services section styling */
+#services {
+  padding: 1rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.btn {
+  margin-right: 0.5rem;
 }
 a:link {
   text-decoration-color: hotpink;
@@ -23,14 +69,14 @@ a:link {
 }
 header {
   display: flex;
-  background-image: url("https://raw.githubusercontent.com/unnamedmistress/Portfolio-Dec22/main/public/assets/img/20220304_122226.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/unnamedmistress/Portfolio-Dec22/main/public/assets/img/20220304_122226.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   height: auto;
   justify-content: center;
   align-content: center;
+  color: #fff; /* Change the text color to white for better visibility */
 }
 #aside img {
   max-height: 150px;
