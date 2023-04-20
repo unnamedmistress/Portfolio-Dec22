@@ -8,7 +8,17 @@ html, body{
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
+.containerblog h2 {
+ background-color: aqua;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.containerblog{
+  border: 3px solid darkslategray;
+  border-radius: 5%;
+  background-image: url("./assets/img/20220304_122226.jpg") ;
+  opacity: 0.2;
 
+}
 p {
   margin-bottom: 1.5rem;
 }
