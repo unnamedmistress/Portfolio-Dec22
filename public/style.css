@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("./assets/img/20220304_122226.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
 }
 
 .containerblog::before {
@@ -36,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5%;
   -webkit-clip-path: inset(5%); /* Safari */
   clip-path: inset(5%);
+  opacity: 0.8;
 }
 p {
   margin-bottom: 1.5rem;
