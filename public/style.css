@@ -12,13 +12,19 @@ h1, h2, h3, h4, h5, h6 {
  background-color: aqua;
  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.containerblog{
-  border: 3px solid darkslategray;
-  border-radius: 5%;
-  background-image: url("./assets/img/20220304_122226.jpg") ;
-  opacity: 0.2;
-  padding: 10%;
+.containerblog {
+  position: relative;
+}
 
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("path/to/background-image.jpg");
+  opacity: 0.5;
+  z-index: -1;
 }
 p {
   margin-bottom: 1.5rem;
