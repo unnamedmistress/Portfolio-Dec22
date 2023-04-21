@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5%;
   -webkit-clip-path: inset(5%); /* Safari */
   clip-path: inset(5%);
-  opacity: 0.8;
+  opacity: 0.4;
 }
 p {
   margin-bottom: 1.5rem;
