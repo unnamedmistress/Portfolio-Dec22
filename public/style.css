@@ -12,10 +12,7 @@ h1, h2, h3, h4, h5, h6 {
  background-color: aqua;
  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-I apologize for the confusion. To remove the opacity from the text inside the container, you can use the CSS background-clip property to specify that the background image should only be visible within the padding area of the container. Here's the updated CSS code:
 
-css
-Copy code
 .containerblog {
   position: relative;
   border: 3px solid darkslategray;
