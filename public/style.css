@@ -186,11 +186,6 @@ header {
   color: #006699;
   text-align: center;
 }
-span {
-  background-color: coral;
-  color: #FFFFFF;
-  text-shadow: 2px 2px #333333;
-}
 .card {
   display: flex;
   flex-direction: column;
