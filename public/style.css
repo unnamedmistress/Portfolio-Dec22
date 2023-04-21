@@ -21,16 +21,16 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("./assets/img/20220304_122226.jpg");
   background-size: cover;
   background-position: center;
+  font-weight: 400;
 }
 
 .containerblog::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.2); 
   z-index: -1;
   border-radius: 5%;
 }
