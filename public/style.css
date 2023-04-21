@@ -16,12 +16,14 @@ h1, h2, h3, h4, h5, h6 {
 .containerblog {
   position: relative;
   border: 3px solid darkslategray;
-  border-radius: 2%;
   padding: 10%;
   background-image: url("./assets/img/20220304_122226.jpg");
   background-size: cover;
   background-position: center;
-  font-weight: 400;
+  font-weight: 500;
+}
+.containerblog p {
+  background-color: darkgray;
 }
 
 .containerblog::before {
