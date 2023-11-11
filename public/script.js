@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const messageBox = document.querySelector('#message-box');
   const sendButton = document.querySelector('#send-button');
-  const firstNameInput = document.querySelector('#first-name-input');
-  const firstName = firstNameInput.value.trim();
+
   function showInitialMessage() {
     const initialMessage = 'Hi, How can we help you evolve with Artificial Intelligence today?';
     appendMessage(initialMessage, 'ai');
   }
-  async function openAIQuery(userInput, firstName) {
+  async function openAIQuery(userInput) {
     try {
       const response = await fetch('/openai-query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userInput, firstName }),
+        body: JSON.stringify({ userInput }),
       });
       const data = await response.json();
       return data.aiResponse;
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setLoadingState(true);
     showTypingAnimation();
 
-    const aiResponse = await openAIQuery(userInput, firstName);
+    const aiResponse = await openAIQuery(userInput);
     removeTypingAnimation();
 
     if (aiResponse) {

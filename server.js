@@ -12,31 +12,29 @@ app.use(cors());
 
 app.post('/openai-query', async (req, res) => {
   const userInput = req.body.userInput;
-  const firstName = req.body.firstName;
-  const resume = process.env.REACT_APP_RESUME;
-  const base = process.env.REACT_APP_BASE // Add this line to get the RESUME from environment variables
-  const aiResponse = await openAIQuery(userInput, firstName, resume, base);
+  const resume = process.env.RESUME;
+  const base = process.env.BASE // Add this line to get the RESUME from environment variables
+  const aiResponse = await openAIQuery(userInput, resume, base);
   res.json({ aiResponse });
 });
-
-async function openAIQuery(userInput, firstName, resume, base) {
-  console.log(firstName)
+async function openAIQuery(userInput, resume, base) {
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   const requestBody = {
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-1106-preview',
     messages: [
-      {"role": "system", "content": base + resume},
-      {"role": "user", "content": "NAME:"+ firstName + 'Respond to this user input: '+ userInput},
-    ],
-    user: firstName,
+      {"role": "system", "content": "Respond as if you are Chrysti and use my instructions and resume " + resume},
+      {"role": "user", "content": "Respond to this user input: " + userInput},
+    ]
   };
-console.log('requestBody: '+ firstName + ' ' + userInput);
+
+  console.log('Request Body:', JSON.stringify(requestBody));  // Log the entire request body
+
   const requestOptions = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.API_KEY}`,
+      'Authorization': `Bearer ${process.env.API_KEY}`, // Use environment variable for API key
     },
     body: JSON.stringify(requestBody),
   };
@@ -51,8 +49,11 @@ console.log('requestBody: '+ firstName + ' ' + userInput);
     }
   } catch (error) {
     console.error('Error with OpenAI API call:', error);
+    console.log('Request Body:', JSON.stringify(requestBody)); // Log the request body on error
+    // Consider adding a response to the client here indicating an error occurred
   }
 }
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
