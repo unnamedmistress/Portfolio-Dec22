@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 .containerblog {
   position: relative;
   border: 3px solid darkslategray;
-  padding: 10%;
+  padding: 5%;
   background-image: url("./assets/img/20220304_122226.jpg");
   background-size: cover;
   background-position: center;
@@ -41,15 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 960px;
   margin: auto;
-  overflow: hidden;
-  padding: 1rem;
+
 }
 
-#aside img {
-  max-height: 150px;
-  max-width: 100px;
-  text-align: left;
-}
+
 
 .card-section {
   padding-bottom: 1rem;
@@ -120,13 +115,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
   color: #fff;
 }
 
 #aside h2 {
   font-size: 1.5rem;
-  margin-top: 15%;
+  /* margin-top: 15%; */
   line-height: 20px;
 }
 

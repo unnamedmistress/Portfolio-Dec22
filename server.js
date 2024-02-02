@@ -49,7 +49,7 @@ async function openAIQuery(userInput, resume, base) {
     }
   } catch (error) {
     console.error('Error with OpenAI API call:', error);
-    console.log('Request Body:', JSON.stringify(requestBody)); // Log the request body on error
+  // Log the request body on error
     // Consider adding a response to the client here indicating an error occurred
   }
 }
