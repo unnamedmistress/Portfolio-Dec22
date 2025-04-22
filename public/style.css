@@ -124,6 +124,17 @@ header {
   color: #fff;
 }
 
+header#about { /* Target the specific header */
+  padding-top: 2rem !important;    /* Further reduced padding (py-4 is ~1.5rem, making it slightly larger) */
+  padding-bottom: 2rem !important; /* Further reduced padding */
+  /* Keep existing background styles */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/unnamedmistress/Portfolio-Dec22/main/public/assets/img/20220304_122226.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
 header.bg-light {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -241,4 +252,55 @@ header img {
     width: 32px !important;
     height: 32px !important;
   }
+}
+
+/* Sidebar Styles */
+aside .list-group-item {
+    border: none; /* Cleaner look */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+}
+
+/* Add dropdown indicator */
+aside .list-group-item[data-bs-toggle="collapse"]::after {
+    font-family: 'bootstrap-icons'; /* Use Bootstrap Icons font */
+    content: '\F282'; /* Chevron down icon */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    transition: transform 0.2s ease-in-out; /* Smooth rotation */
+    color: #6c757d; /* Match sub-item color */
+}
+
+/* Rotate indicator when expanded */
+aside .list-group-item[data-bs-toggle="collapse"][aria-expanded="true"]::after {
+     content: '\F286'; /* Chevron up icon */
+     /* transform: translateY(-50%) rotate(-180deg); */ /* Alternative rotation */
+}
+
+aside .list-group-item i {
+    width: 20px; /* Align icons */
+}
+
+aside .collapse .list-unstyled {
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa; /* Light background for dropdown items */
+    border-radius: 0 0 0.25rem 0.25rem; /* Match list group rounding */
+    padding-bottom: 0.5rem; /* Add some padding at the bottom */
+}
+
+aside .collapse li {
+    padding: 0.2rem 0;
+    color: #6c757d; /* Subdued color for sub-items */
+}
+
+/* Ensure sticky top works */
+@media (min-width: 992px) { /* lg breakpoint */
+    aside .sticky-top {
+        position: sticky;
+        /* top value is set inline */
+        z-index: 1020; /* Below navbar */
+    }
 }

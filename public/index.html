@@ -28,141 +28,258 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <!-- Added Training Videos Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=HYeZULPFpXw" target="_blank" rel="noopener">
+                            <i class="bi bi-youtube me-1"></i>Training Videos
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="about" class="py-5 text-center bg-gradient-primary text-white">
+    <!-- Hero Section - Restructured for Inline Image -->
+    <header id="about" class="py-4 text-white"> <!-- Reduced padding further (py-4) and removed text-center -->
         <div class="container">
-            <img src="./assets/img/P2355734.jpg" alt="Chrysti Reichert Profile Picture" class="rounded-circle mb-3 shadow-sm" style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%; border: 3px solid rgba(255, 255, 255, 0.8);">
-            <h1 class="display-4 fw-bold">Chrysti Reichert</h1>
-            <p class="lead fw-normal mb-4">Generative AI Specialist | Power Platform Developer | Azure Cloud Engineer</p>
-            <p class="mb-4 mx-auto" style="max-width: 600px;">Leveraging AI (GPT, Langchain), Power Platform, and Azure to build intelligent automation and drive business transformation.</p>
-            <a href="https://www.linkedin.com/in/chrysti-reichert-13675b165/" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg me-2" aria-label="View Chrysti's LinkedIn Profile">
-                <i class="bi bi-linkedin me-2"></i>LinkedIn Profile
-            </a>
+            <div class="row align-items-center"> <!-- Use row and align items vertically -->
+                <!-- Image Column -->
+                <div class="col-md-3 text-center text-md-end mb-3 mb-md-0"> <!-- Adjust alignment and margin -->
+                    <img src="./assets/img/P2355734.jpg" alt="Chrysti Reichert Profile Picture" class="rounded-circle shadow-sm" style="width: 120px; height: 120px; object-fit: cover; object-position: center 25%; border: 3px solid rgba(255, 255, 255, 0.8);"> <!-- Reduced size slightly, removed mb-3 -->
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-9 text-center text-md-start"> <!-- Adjust text alignment -->
+                    <h1 class="display-5 fw-bold">Chrysti Reichert</h1> <!-- Slightly smaller display size -->
+                    <p class="lead fw-normal mb-2">Generative AI Specialist | Power Platform Developer | Azure Cloud Engineer</p> <!-- Reduced margin -->
+                    <p class="mb-3" style="max-width: 600px;">Leveraging AI (GPT, Langchain), Power Platform, and Azure to build intelligent automation and drive business transformation.</p> <!-- Reduced margin -->
+                    <a href="https://www.linkedin.com/in/chrysti-reichert-13675b165/" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg" aria-label="View Chrysti's LinkedIn Profile"> <!-- Removed me-2 -->
+                        <i class="bi bi-linkedin me-2"></i>LinkedIn Profile
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container my-5">
+        <div class="row">
+            <!-- Sidebar Column -->
+            <aside class="col-lg-3 mb-4 mb-lg-0">
+                <div class="sticky-top" style="top: 80px;"> <!-- Adjust top offset based on navbar height -->
+                    <h3 class="h5 fw-bold mb-3"><i class="bi bi-tools me-2"></i>Services Offered</h3>
+                    <!-- Added Hourly Rate Pitch -->
+                    <div class="alert alert-info small p-2 mb-3 shadow-sm" role="alert">
+                        Expert AI & Automation solutions starting at only <strong>$125/hr</strong>. Let's transform your business!
+                    </div>
+                    <div class="list-group shadow-sm">
+                        <a href="#services-ai" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-ai">
+                            <i class="bi bi-robot me-2 text-primary"></i>AI & Automation
+                        </a>
+                        <div class="collapse" id="services-ai">
+                            <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>AI Strategy Consulting</li>
+                                <li>AI Governance & Risk Management</li>
+                                <li>Conversational AI & Chatbot Development</li>
+                                <li>Custom GPT & LLM Application Development</li>
+                                <li>AI-Powered Workflow Automation</li>
+                                <li>Prompt Engineering</li>
+                                <li>AI Policy & Compliance Review</li>
+                                <li>Visual AI & Document Automation</li>
+                                <li>Ethical AI Consulting</li>
+                            </ul>
+                        </div>
 
-        <!-- About Me Snippet -->
-        <section id="about-me" class="mb-5 p-4 bg-light rounded shadow-sm">
-             <h2 class="display-6 fw-bold text-center mb-4">About Me</h2>
-             <p class="text-center lead">I am an AI Consultant and Software Engineer passionate about empowering businesses with cutting-edge technology. My expertise lies in developing custom Generative AI solutions, automating complex workflows with the Power Platform, and leveraging the scalability of Microsoft Azure. I thrive on translating business needs into functional, intelligent applications using tools like GPT, Langchain, Power Apps, Power Automate, and Azure AI services.</p>
-        </section>
+                        <a href="#services-power" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-power">
+                            <i class="bi bi-power me-2 text-info"></i>Power Platform
+                        </a>
+                        <div class="collapse" id="services-power">
+                             <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>Power Apps Development</li>
+                                <li>Power Automate Flow Design</li>
+                                <li>Power Virtual Agent Bot Creation</li>
+                                <li>Dataverse & SharePoint Integration</li>
+                                <li>Power BI Dashboard Development</li>
+                                <li>FX Expressions & Data Parsing Support</li>
+                            </ul>
+                        </div>
 
-        <!-- Skills Section - More Detailed -->
-        <section id="skills" class="mb-5">
-            <h2 class="display-6 fw-bold text-center mb-4">Technical Skillset</h2>
-            <div class="row g-4">
-                <!-- AI / Machine Learning -->
-                <div class="col-md-4">
-                    <h3 class="h5 fw-semibold mb-3 text-primary"><i class="bi bi-robot me-2"></i>Artificial Intelligence & GenAI</h3>
-                    <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Generative AI</span>
-                    <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Prompt Engineering</span>
-                    <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">GPT Models</span>
-                    <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Langchain</span>
-                    <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">AI Consulting</span>
-                </div>
-                <!-- Power Platform & Azure -->
-                <div class="col-md-4">
-                     <h3 class="h5 fw-semibold mb-3 text-info"><i class="bi bi-cloud-fill me-2"></i>Power Platform & Azure</h3>
-                     <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Power Apps</span>
-                     <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Power Automate</span>
-                     <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Microsoft Azure</span>
-                     <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Azure AI Services</span>
-                     <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Azure Functions</span>
-                </div>
-                <!-- Web Development -->
-                <div class="col-md-4">
-                    <h3 class="h5 fw-semibold mb-3 text-success"><i class="bi bi-code-slash me-2"></i>Web & Software Development</h3>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">MERN Stack</span>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">JavaScript</span>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">Node.js</span>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">React</span>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">API Development</span>
-                    <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">Python</span>
-                </div>
-            </div>
-        </section>
+                         <a href="#services-devops" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-devops">
+                            <i class="bi bi-code-slash me-2 text-success"></i>Software & DevOps
+                        </a>
+                        <div class="collapse" id="services-devops">
+                             <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>Full Stack Web Development (MERN, TypeScript)</li>
+                                <li>REST API Development & Integration</li>
+                                <li>React & Node.js App Development</li>
+                                <li>App Modernization & System Refactoring</li>
+                                <li>CI/CD with Azure DevOps</li>
+                                <li>Containerization with Docker</li>
+                            </ul>
+                        </div>
 
-        <!-- Services Section - Enhanced Descriptions -->
-        <section id="services" class="mb-5">
-            <h2 class="display-6 fw-bold text-center mb-4">Core Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm service-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-stars fs-1 text-primary mb-3"></i>
-                            <h3 class="card-title h5 fw-bold">Generative AI Solutions</h3>
-                            <p class="card-text">Custom chatbot development, content generation tools, and AI-driven insights using GPT, Langchain, and Azure AI.</p>
+                         <a href="#services-cloud" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-cloud">
+                            <i class="bi bi-cloud-fill me-2 text-warning"></i>Cloud & Data
+                        </a>
+                        <div class="collapse" id="services-cloud">
+                             <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>Azure Cloud Solutions Architecture</li>
+                                <li>Cloud Migration & Optimization</li>
+                                <li>Secure App Deployment with Azure</li>
+                                <li>Azure OpenAI Integration</li>
+                                <li>Data Pipeline Design & SQL Optimization</li>
+                            </ul>
+                        </div>
+
+                         <a href="#services-training" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-training">
+                            <i class="bi bi-person-video3 me-2 text-danger"></i>Training & Enablement
+                        </a>
+                        <div class="collapse" id="services-training">
+                             <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>AI Training Workshops for Teams</li>
+                                <li>Technical Onboarding for IT Departments</li>
+                                <li>Change Management & Digital Adoption</li>
+                                <li>Public Speaking on AI and Innovation</li>
+                                <li>M365 / Power Platform Corporate Training</li>
+                            </ul>
+                        </div>
+
+                         <a href="#services-business" class="list-group-item list-group-item-action" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="services-business">
+                            <i class="bi bi-briefcase-fill me-2 text-secondary"></i>Business & Digital Transformation
+                        </a>
+                        <div class="collapse" id="services-business">
+                             <ul class="list-unstyled ps-3 pt-2 small">
+                                <li>Business Process Automation Consulting</li>
+                                <li>Workflow Optimization</li>
+                                <li>Digital Strategy Roadmapping</li>
+                                <li>Cross-Department AI Ideation Sessions</li>
+                                <li>Regulatory Tech Enablement (HIPAA, NIST, AIA)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm service-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-gear-wide-connected fs-1 text-info mb-3"></i>
-                            <h3 class="card-title h5 fw-bold">Power Platform Automation</h3>
-                            <p class="card-text">Building custom Power Apps and automating complex business processes with Power Automate flows.</p>
+            </aside>
+
+            <!-- Main Content Column -->
+            <div class="col-lg-9">
+                <!-- About Me Snippet -->
+                <section id="about-me" class="mb-5 p-4 bg-light rounded shadow-sm">
+                     <h2 class="display-6 fw-bold text-center mb-4">About Me</h2>
+                     <p class="text-center lead">I am an AI Consultant and Software Engineer passionate about empowering businesses with cutting-edge technology. My expertise lies in developing custom Generative AI solutions, automating complex workflows with the Power Platform, and leveraging the scalability of Microsoft Azure. I thrive on translating business needs into functional, intelligent applications using tools like GPT, Langchain, Power Apps, Power Automate, and Azure AI services.</p>
+                </section>
+
+                <!-- Skills Section - More Detailed -->
+                <section id="skills" class="mb-5">
+                    <h2 class="display-6 fw-bold text-center mb-4">Technical Skillset</h2>
+                    <div class="row g-4">
+                        <!-- AI / Machine Learning -->
+                        <div class="col-md-4">
+                            <h3 class="h5 fw-semibold mb-3 text-primary"><i class="bi bi-robot me-2"></i>Artificial Intelligence & GenAI</h3>
+                            <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Generative AI</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Prompt Engineering</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">GPT Models</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">Langchain</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis p-2 me-1 mb-1">AI Consulting</span>
+                        </div>
+                        <!-- Power Platform & Azure -->
+                        <div class="col-md-4">
+                             <h3 class="h5 fw-semibold mb-3 text-info"><i class="bi bi-cloud-fill me-2"></i>Power Platform & Azure</h3>
+                             <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Power Apps</span>
+                             <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Power Automate</span>
+                             <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Microsoft Azure</span>
+                             <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Azure AI Services</span>
+                             <span class="badge bg-info-subtle text-info-emphasis p-2 me-1 mb-1">Azure Functions</span>
+                        </div>
+                        <!-- Web Development -->
+                        <div class="col-md-4">
+                            <h3 class="h5 fw-semibold mb-3 text-success"><i class="bi bi-code-slash me-2"></i>Web & Software Development</h3>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">MERN Stack</span>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">JavaScript</span>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">Node.js</span>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">React</span>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">API Development</span>
+                            <span class="badge bg-success-subtle text-success-emphasis p-2 me-1 mb-1">Python</span>
                         </div>
                     </div>
-                </div>
-                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm service-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-braces fs-1 text-success mb-3"></i>
-                            <h3 class="card-title h5 fw-bold">Full-Stack Development</h3>
-                            <p class="card-text">End-to-end web application development using the MERN stack, integrated with AI and cloud services.</p>
+                </section>
+
+                <!-- Services Section - Enhanced Descriptions -->
+                <section id="services" class="mb-5">
+                    <h2 class="display-6 fw-bold text-center mb-4">Core Services Overview</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm service-card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-stars fs-1 text-primary mb-3"></i>
+                                    <h3 class="card-title h5 fw-bold">Generative AI Solutions</h3>
+                                    <p class="card-text">Custom chatbot development, content generation tools, and AI-driven insights using GPT, Langchain, and Azure AI.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm service-card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-gear-wide-connected fs-1 text-info mb-3"></i>
+                                    <h3 class="card-title h5 fw-bold">Power Platform Automation</h3>
+                                    <p class="card-text">Building custom Power Apps and automating complex business processes with Power Automate flows.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-4">
+                            <div class="card h-100 shadow-sm service-card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-braces fs-1 text-success mb-3"></i>
+                                    <h3 class="card-title h5 fw-bold">Full-Stack Development</h3>
+                                    <p class="card-text">End-to-end web application development using the MERN stack, integrated with AI and cloud services.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Projects Section (Placeholder) -->
-        <section id="projects" class="mb-5">
-            <h2 class="display-6 fw-bold text-center mb-4">Featured Projects</h2>
-            <div class="row g-4 justify-content-center"> <!-- Added justify-content-center -->
-                <!-- Project Card 1 -->
-                <div class="col-md-6 col-lg-5"> <!-- Adjusted column size for potentially 2 projects -->
-                    <div class="card h-100 shadow-sm project-card">
-                        <!-- Updated placeholder image source -->
-                        <img src="https://placehold.co/600x400/0D6EFD/FFFFFF?text=GenAI+Chatbot" class="card-img-top" alt="Generative AI Chatbot Project">
-                        <div class="card-body">
-                            <h3 class="card-title h5 fw-bold">Azure-Hosted GenAI Chatbot</h3>
-                            <p class="card-text">Developed a context-aware chatbot using Langchain and Azure AI Services for enhanced customer support.</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary disabled mt-auto" aria-disabled="true">View Details (Coming Soon)</a> <!-- Added mt-auto to push button down -->
+                <!-- Projects Section (Placeholder) -->
+                <section id="projects" class="mb-5">
+                    <h2 class="display-6 fw-bold text-center mb-4">Featured Projects</h2>
+                    <div class="row g-4 justify-content-center">
+                        <!-- Project Card 1 -->
+                        <div class="col-md-6"> <!-- Adjusted to take half width -->
+                            <div class="card h-100 shadow-sm project-card">
+                                <img src="https://placehold.co/600x400/0D6EFD/FFFFFF?text=GenAI+Chatbot" class="card-img-top" alt="Generative AI Chatbot Project">
+                                <div class="card-body d-flex flex-column"> <!-- Added flex classes -->
+                                    <h3 class="card-title h5 fw-bold">Azure-Hosted GenAI Chatbot</h3>
+                                    <p class="card-text">Developed a context-aware chatbot using Langchain and Azure AI Services for enhanced customer support.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary disabled mt-auto" aria-disabled="true">View Details (Coming Soon)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Card 2 -->
+                        <div class="col-md-6"> <!-- Adjusted to take half width -->
+                            <div class="card h-100 shadow-sm project-card">
+                                <img src="https://placehold.co/600x400/0DCAF0/FFFFFF?text=Power+Platform" class="card-img-top" alt="Power Platform Automation Project">
+                                <div class="card-body d-flex flex-column"> <!-- Added flex classes -->
+                                    <h3 class="card-title h5 fw-bold">Workflow Automation Suite</h3>
+                                    <p class="card-text">Designed and implemented Power Automate flows to streamline business processes and improve efficiency.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-info disabled mt-auto" aria-disabled="true">View Details (Coming Soon)</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="col-md-6 col-lg-5"> <!-- Adjusted column size -->
-                    <div class="card h-100 shadow-sm project-card">
-                        <!-- Updated placeholder image source -->
-                        <img src="https://placehold.co/600x400/0DCAF0/FFFFFF?text=Power+Platform" class="card-img-top" alt="Power Platform Automation Project">
-                        <div class="card-body">
-                            <h3 class="card-title h5 fw-bold">Workflow Automation Suite</h3>
-                            <p class="card-text">Designed and implemented Power Automate flows to streamline business processes and improve efficiency.</p>
-                            <a href="#" class="btn btn-sm btn-outline-info disabled mt-auto" aria-disabled="true">View Details (Coming Soon)</a> <!-- Added mt-auto -->
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Project Card 3 here if needed -->
+                </section>
 
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="text-center bg-light p-4 rounded">
-             <h2 class="display-6 fw-bold mb-3">Let's Connect</h2>
-             <p class="lead mb-4">Ready to discuss how AI can transform your business? Reach out!</p>
-        </section>
-
+                <!-- Contact Section -->
+                <section id="contact" class="text-center bg-light p-4 rounded shadow-sm"> <!-- Added shadow -->
+                     <h2 class="display-6 fw-bold mb-3">Let's Connect</h2>
+                     <p class="lead mb-4">Ready to discuss how AI can transform your business? Reach out!</p>
+                     <!-- Added LinkedIn Button -->
+                     <a href="https://www.linkedin.com/in/chrysti-reichert-13675b165/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                         <i class="bi bi-linkedin me-2"></i>Message me on LinkedIn
+                     </a>
+                     <!-- You could also add your Calendly link here if desired -->
+                     <!-- <a href="https://calendly.com/momchrysti/30min" target="_blank" rel="noopener" class="btn btn-secondary btn-lg mt-2">
+                         <i class="bi bi-calendar-check me-2"></i>Schedule a Consultation
+                     </a> -->
+                </section>
+            </div> <!-- End Main Content Column -->
+        </div> <!-- End Row -->
     </main>
 
     <footer class="bg-dark text-white py-3 text-center">
